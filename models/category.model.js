@@ -40,7 +40,6 @@ categorySchema.pre('save', function (next) {
     if (this.isModified('name')) {
         this.slug = generateSlug(this.name);
     }
-    next();
 });
 
 const Category = mongoose.model('Category', categorySchema);
