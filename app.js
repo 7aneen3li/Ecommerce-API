@@ -6,7 +6,7 @@ const connectDB = require('./db/connectDB');
 
 const categoryRouter = require('./routes/category.routes');
 const productRouter = require('./routes/product.routes');
-// const cartRouter = require('./routes/cart.routes');
+const cartRouter = require('./routes/cart.routes');
 // const orderRouter = require('./routes/order.routes');
 const AppError = require('./utils/AppError');
 const errorHandler = require('./middleware/errorHandler');
@@ -27,7 +27,7 @@ app.use(mongoSanitize());
 
 app.use('/api/categories', categoryRouter);
 app.use('/api/products', productRouter);
-// app.use('/api/cart', cartRouter);
+app.use('/api/cart', cartRouter);
 // app.use('/api/orders', orderRouter);
 
 app.use((req, res, next) => {
