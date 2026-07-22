@@ -1,0 +1,4145 @@
+{
+  "info": {
+    "_postman_id": "f663ddb5-40a9-48a7-bb00-368b21a4d338",
+    "name": "E-Commerce API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55894727",
+    "_collection_link": "https://go.postman.co/collection/55894727-f663ddb5-40a9-48a7-bb00-368b21a4d338?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "Get All",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categories",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categories"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "755"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"2f3-rMElaCk1wxh/Lcf3vrDKgbbibys\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:27:15 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Categories retrieved successfully\",\n    \"data\": [\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c087\",\n            \"name\": \"Electronics\",\n            \"slug\": \"electronics\",\n            \"description\": \"Gadegets, SmartPhones, and Computing Hardware.\",\n            \"createdAt\": \"2026-07-11T09:02:29.477Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.477Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c089\",\n            \"name\": \"Home & Kitchen\",\n            \"slug\": \"home-kitchen\",\n            \"description\": \"Appliances, Kitchen Tools, and Living Furniture.\",\n            \"createdAt\": \"2026-07-11T09:02:29.483Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.483Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c088\",\n            \"name\": \"Apparel\",\n            \"slug\": \"apparel\",\n            \"description\": \"Trendy Clothes, Footwear, and Apparel Accessories.\",\n            \"createdAt\": \"2026-07-11T09:02:29.483Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.483Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Add Category",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Home Office & Ergonomics\",\r\n    \"description\": \"Premium desks, chairs, and accessories for productivity\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/categories",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categories"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "success - 201 Created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Home Office & Ergonomics\",\r\n    \"description\": \"Premium desks, chairs, and accessories for productivity\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "332"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"14c-osbAu0GCGtAmU0NS+dXj4wEONn4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:27:30 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Category created successfully\",\n    \"data\": {\n        \"name\": \"Home Office & Ergonomics\",\n        \"slug\": \"home-office-and-ergonomics\",\n        \"description\": \"Premium desks, chairs, and accessories for productivity\",\n        \"_id\": \"6a5244c248ef2d119fbec9b4\",\n        \"createdAt\": \"2026-07-11T13:27:30.105Z\",\n        \"updatedAt\": \"2026-07-11T13:27:30.105Z\",\n        \"__v\": 0\n    }\n}"
+            },
+            {
+              "name": "Error - 409 Conflict",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Home Office & Ergonomics\",\r\n    \"description\": \"Premium desks, chairs, and accessories for productivity\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories"
+                  ]
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "62"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"3e-oZ/jKiHEkCAMNSACudXvPrLMYFk\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:28:18 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Name already exists.\",\n    \"data\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categories/{{categoryId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "{{categoryId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Error - 404 Not Found",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories/{{categoryId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories",
+                    "{{categoryId}}"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "72"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"48-k/LW3OQIEE70kVykiM21qOkSYxM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:29:59 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"No category found with that ID\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories/{{categoryId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories",
+                    "{{categoryId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "336"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"150-8JCpwpJJAf+CbU3MkW7aMTZMMAs\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:30:41 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Categories retrieved successfully\",\n    \"data\": {\n        \"_id\": \"6a5244c248ef2d119fbec9b4\",\n        \"name\": \"Home Office & Ergonomics\",\n        \"slug\": \"home-office-and-ergonomics\",\n        \"description\": \"Premium desks, chairs, and accessories for productivity\",\n        \"createdAt\": \"2026-07-11T13:27:30.105Z\",\n        \"updatedAt\": \"2026-07-11T13:27:30.105Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Edit Category",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Ergonomic Home Office Gear\",\r\n    \"description\": \"Premium setups, desks, and health-conscious accessories for remote work\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/categories/{{categoryId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "{{categoryId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Ergonomic Home Office Gear\",\r\n    \"description\": \"Premium setups, desks, and health-conscious accessories for remote work\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories/{{categoryId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories",
+                    "{{categoryId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "352"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"160-q6dVabwrEUkfLNQ8NUx1nOZlSqM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:31:06 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Categories updated successfully\",\n    \"data\": {\n        \"_id\": \"6a5244c248ef2d119fbec9b4\",\n        \"name\": \"Ergonomic Home Office Gear\",\n        \"slug\": \"ergonomic-home-office-gear\",\n        \"description\": \"Premium setups, desks, and health-conscious accessories for remote work\",\n        \"createdAt\": \"2026-07-11T13:27:30.105Z\",\n        \"updatedAt\": \"2026-07-11T13:31:06.629Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categories/{{categoryId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "{{categoryId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories/{{categoryId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories",
+                    "{{categoryId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "76"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4c-5jfDoOKcchS5VdTf169qJHfx+RM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:17:58 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Categories deleted successfully\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "Error - 404 Not Found",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories/{{categoryId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories",
+                    "{{categoryId}}"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "72"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"48-k/LW3OQIEE70kVykiM21qOkSYxM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:34:25 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"No category found with that ID\",\n    \"data\": null\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get All Products",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Mechanical Ergonomic Keyboard\",\r\n    \"description\": \"Spplit wireless keyboard with hot-swappable switches and RGB backlighting\",\r\n    \"price\": 149.50,\r\n    \"category\": \"{{categoryId}}\",\r\n    \"stock\": 120\r\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Mechanical Ergonomic Keyboard\",\r\n    \"description\": \"Spplit wireless keyboard with hot-swappable switches and RGB backlighting\",\r\n    \"price\": 149.50,\r\n    \"category\": \"{{categoryId}}\",\r\n    \"stock\": 120\r\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "3495"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"da7-jPa8qxm+StnYyeNVW/3cPvgCLNI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:35:53 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Products retrieved successfully\",\n    \"results\": 6,\n    \"pagination\": {\n        \"totalItems\": 6,\n        \"currentPage\": 1,\n        \"totalPages\": 1,\n        \"itemsPerPage\": 10\n    },\n    \"data\": [\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08a\",\n            \"name\": \"Wireless ANC Headphones\",\n            \"description\": \"Premium over-air noise cancelling headphones.\",\n            \"price\": 199.99,\n            \"stock\": 50,\n            \"images\": [\n                \"https://morpheus360.com/cdn/shop/products/HP9350B_AltFrontAnglecopy2.jpg?v=1660232787\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c087\",\n                \"name\": \"Electronics\",\n                \"description\": \"Gadegets, SmartPhones, and Computing Hardware.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08a\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08b\",\n            \"name\": \"Mechanical Keyboard\",\n            \"description\": \"Tactile mechanical gaming keyboard with RGB lighting.\",\n            \"price\": 89.99,\n            \"stock\": 60,\n            \"images\": [\n                \"https://m.media-amazon.com/images/I/71+GqIHjlYL._AC_UF894,1000_QL80_.jpg\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c087\",\n                \"name\": \"Electronics\",\n                \"description\": \"Gadegets, SmartPhones, and Computing Hardware.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08b\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08c\",\n            \"name\": \"Premium Oversized Hoodie\",\n            \"description\": \"Heavyweight comfort hoodie made from 100% organic cotton.\",\n            \"price\": 67,\n            \"stock\": 48,\n            \"images\": [\n                \"https://celevere.com/cdn/shop/files/3.webp?v=1768080610&width=3840\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c088\",\n                \"name\": \"Apparel\",\n                \"description\": \"Trendy Clothes, Footwear, and Apparel Accessories.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08c\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08d\",\n            \"name\": \"Waterproof Running Shoes\",\n            \"description\": \"Durable all-terrain outdoor trail running sneakers.\",\n            \"price\": 125,\n            \"stock\": 0,\n            \"images\": [\n                \"https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/w_363,c_limit/99d2d8b2-013a-4242-9ccd-f4f49a674a9b/best-nike-waterproof-running-shoes.jpg\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c088\",\n                \"name\": \"Apparel\",\n                \"description\": \"Trendy Clothes, Footwear, and Apparel Accessories.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": false,\n            \"id\": \"6a5206a5bd51e2a1ef59c08d\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08e\",\n            \"name\": \"Ergonomic Mesh Chair\",\n            \"description\": \"High-back office desk chair with dynamic lumbar support.\",\n            \"price\": 266,\n            \"stock\": 17,\n            \"images\": [\n                \"https://m.media-amazon.com/images/I/71Pm-xYk7DL._AC_UF894,1000_QL80_.jpg\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c089\",\n                \"name\": \"Home & Kitchen\",\n                \"description\": \"Appliances, Kitchen Tools, and Living Furniture.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08e\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08f\",\n            \"name\": \"Stainless Steel Coffe Maker\",\n            \"description\": \"15-bar programmable expresso machine with milk frother.\",\n            \"price\": 588,\n            \"stock\": 7,\n            \"images\": [\n                \"https://www.cnet.com/a/img/resize/cb2220b63c1f6f651b10a2522d2afe9aae0d82ce/hub/2025/06/20/29042b5c-e4e0-4e28-b594-60c07dbbb395/img-1480-1.jpg?auto=webp&height=500\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c089\",\n                \"name\": \"Home & Kitchen\",\n                \"description\": \"Appliances, Kitchen Tools, and Living Furniture.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08f\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get (with Filters)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/products?minPrice=150&maxPrice=300&inStock=true&page=1&limit=10",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "category",
+                  "value": "{{categoryId}}",
+                  "disabled": true
+                },
+                {
+                  "key": "minPrice",
+                  "value": "150"
+                },
+                {
+                  "key": "maxPrice",
+                  "value": "300"
+                },
+                {
+                  "key": "search",
+                  "value": "keyboard",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "inStock",
+                  "value": "true"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/products?minPrice=150&maxPrice=300&inStock=true&page=1&limit=10",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "category",
+                      "value": "{{categoryId}}",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "minPrice",
+                      "value": "150"
+                    },
+                    {
+                      "key": "maxPrice",
+                      "value": "300"
+                    },
+                    {
+                      "key": "search",
+                      "value": "keyboard",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "inStock",
+                      "value": "true"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1227"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4cb-/3qje+YjtDoCVhwY/b2DtISXp3E\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:38:59 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Products retrieved successfully\",\n    \"results\": 2,\n    \"pagination\": {\n        \"totalItems\": 2,\n        \"currentPage\": 1,\n        \"totalPages\": 1,\n        \"itemsPerPage\": 10\n    },\n    \"data\": [\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08a\",\n            \"name\": \"Wireless ANC Headphones\",\n            \"description\": \"Premium over-air noise cancelling headphones.\",\n            \"price\": 199.99,\n            \"stock\": 50,\n            \"images\": [\n                \"https://morpheus360.com/cdn/shop/products/HP9350B_AltFrontAnglecopy2.jpg?v=1660232787\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c087\",\n                \"name\": \"Electronics\",\n                \"description\": \"Gadegets, SmartPhones, and Computing Hardware.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08a\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08e\",\n            \"name\": \"Ergonomic Mesh Chair\",\n            \"description\": \"High-back office desk chair with dynamic lumbar support.\",\n            \"price\": 266,\n            \"stock\": 17,\n            \"images\": [\n                \"https://m.media-amazon.com/images/I/71Pm-xYk7DL._AC_UF894,1000_QL80_.jpg\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c089\",\n                \"name\": \"Home & Kitchen\",\n                \"description\": \"Appliances, Kitchen Tools, and Living Furniture.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08e\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/products?minPrice=150",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "category",
+                      "value": "{{categoryId}}",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "minPrice",
+                      "value": "150"
+                    },
+                    {
+                      "key": "maxPrice",
+                      "value": "300",
+                      "disabled": true
+                    },
+                    {
+                      "key": "search",
+                      "value": "keyboard",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "inStock",
+                      "value": "true",
+                      "disabled": true
+                    },
+                    {
+                      "key": "page",
+                      "value": "1",
+                      "disabled": true
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1852"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"73c-4qvWN1RXUD+a14qBq55PNh84Bi0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:39:33 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Products retrieved successfully\",\n    \"results\": 3,\n    \"pagination\": {\n        \"totalItems\": 3,\n        \"currentPage\": 1,\n        \"totalPages\": 1,\n        \"itemsPerPage\": 10\n    },\n    \"data\": [\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08a\",\n            \"name\": \"Wireless ANC Headphones\",\n            \"description\": \"Premium over-air noise cancelling headphones.\",\n            \"price\": 199.99,\n            \"stock\": 50,\n            \"images\": [\n                \"https://morpheus360.com/cdn/shop/products/HP9350B_AltFrontAnglecopy2.jpg?v=1660232787\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c087\",\n                \"name\": \"Electronics\",\n                \"description\": \"Gadegets, SmartPhones, and Computing Hardware.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08a\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08e\",\n            \"name\": \"Ergonomic Mesh Chair\",\n            \"description\": \"High-back office desk chair with dynamic lumbar support.\",\n            \"price\": 266,\n            \"stock\": 17,\n            \"images\": [\n                \"https://m.media-amazon.com/images/I/71Pm-xYk7DL._AC_UF894,1000_QL80_.jpg\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c089\",\n                \"name\": \"Home & Kitchen\",\n                \"description\": \"Appliances, Kitchen Tools, and Living Furniture.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08e\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08f\",\n            \"name\": \"Stainless Steel Coffe Maker\",\n            \"description\": \"15-bar programmable expresso machine with milk frother.\",\n            \"price\": 588,\n            \"stock\": 7,\n            \"images\": [\n                \"https://www.cnet.com/a/img/resize/cb2220b63c1f6f651b10a2522d2afe9aae0d82ce/hub/2025/06/20/29042b5c-e4e0-4e28-b594-60c07dbbb395/img-1480-1.jpg?auto=webp&height=500\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c089\",\n                \"name\": \"Home & Kitchen\",\n                \"description\": \"Appliances, Kitchen Tools, and Living Furniture.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08f\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/products?maxPrice=300",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "category",
+                      "value": "{{categoryId}}",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "minPrice",
+                      "value": "150",
+                      "disabled": true
+                    },
+                    {
+                      "key": "maxPrice",
+                      "value": "300"
+                    },
+                    {
+                      "key": "search",
+                      "value": "keyboard",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "inStock",
+                      "value": "true",
+                      "disabled": true
+                    },
+                    {
+                      "key": "page",
+                      "value": "1",
+                      "disabled": true
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "2870"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"b36-I66tXqtlF7ic/Dr04NF7TvXduTQ\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:39:45 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Products retrieved successfully\",\n    \"results\": 5,\n    \"pagination\": {\n        \"totalItems\": 5,\n        \"currentPage\": 1,\n        \"totalPages\": 1,\n        \"itemsPerPage\": 10\n    },\n    \"data\": [\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08c\",\n            \"name\": \"Premium Oversized Hoodie\",\n            \"description\": \"Heavyweight comfort hoodie made from 100% organic cotton.\",\n            \"price\": 67,\n            \"stock\": 48,\n            \"images\": [\n                \"https://celevere.com/cdn/shop/files/3.webp?v=1768080610&width=3840\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c088\",\n                \"name\": \"Apparel\",\n                \"description\": \"Trendy Clothes, Footwear, and Apparel Accessories.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08c\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08b\",\n            \"name\": \"Mechanical Keyboard\",\n            \"description\": \"Tactile mechanical gaming keyboard with RGB lighting.\",\n            \"price\": 89.99,\n            \"stock\": 60,\n            \"images\": [\n                \"https://m.media-amazon.com/images/I/71+GqIHjlYL._AC_UF894,1000_QL80_.jpg\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c087\",\n                \"name\": \"Electronics\",\n                \"description\": \"Gadegets, SmartPhones, and Computing Hardware.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08b\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08d\",\n            \"name\": \"Waterproof Running Shoes\",\n            \"description\": \"Durable all-terrain outdoor trail running sneakers.\",\n            \"price\": 125,\n            \"stock\": 0,\n            \"images\": [\n                \"https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/w_363,c_limit/99d2d8b2-013a-4242-9ccd-f4f49a674a9b/best-nike-waterproof-running-shoes.jpg\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c088\",\n                \"name\": \"Apparel\",\n                \"description\": \"Trendy Clothes, Footwear, and Apparel Accessories.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": false,\n            \"id\": \"6a5206a5bd51e2a1ef59c08d\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08a\",\n            \"name\": \"Wireless ANC Headphones\",\n            \"description\": \"Premium over-air noise cancelling headphones.\",\n            \"price\": 199.99,\n            \"stock\": 50,\n            \"images\": [\n                \"https://morpheus360.com/cdn/shop/products/HP9350B_AltFrontAnglecopy2.jpg?v=1660232787\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c087\",\n                \"name\": \"Electronics\",\n                \"description\": \"Gadegets, SmartPhones, and Computing Hardware.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08a\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08e\",\n            \"name\": \"Ergonomic Mesh Chair\",\n            \"description\": \"High-back office desk chair with dynamic lumbar support.\",\n            \"price\": 266,\n            \"stock\": 17,\n            \"images\": [\n                \"https://m.media-amazon.com/images/I/71Pm-xYk7DL._AC_UF894,1000_QL80_.jpg\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c089\",\n                \"name\": \"Home & Kitchen\",\n                \"description\": \"Appliances, Kitchen Tools, and Living Furniture.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08e\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/products?minPrice=150&maxPrice=300",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "category",
+                      "value": "{{categoryId}}",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "minPrice",
+                      "value": "150"
+                    },
+                    {
+                      "key": "maxPrice",
+                      "value": "300"
+                    },
+                    {
+                      "key": "search",
+                      "value": "keyboard",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "inStock",
+                      "value": "true",
+                      "disabled": true
+                    },
+                    {
+                      "key": "page",
+                      "value": "1",
+                      "disabled": true
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1227"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4cb-/3qje+YjtDoCVhwY/b2DtISXp3E\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:39:55 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Products retrieved successfully\",\n    \"results\": 2,\n    \"pagination\": {\n        \"totalItems\": 2,\n        \"currentPage\": 1,\n        \"totalPages\": 1,\n        \"itemsPerPage\": 10\n    },\n    \"data\": [\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08a\",\n            \"name\": \"Wireless ANC Headphones\",\n            \"description\": \"Premium over-air noise cancelling headphones.\",\n            \"price\": 199.99,\n            \"stock\": 50,\n            \"images\": [\n                \"https://morpheus360.com/cdn/shop/products/HP9350B_AltFrontAnglecopy2.jpg?v=1660232787\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c087\",\n                \"name\": \"Electronics\",\n                \"description\": \"Gadegets, SmartPhones, and Computing Hardware.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08a\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08e\",\n            \"name\": \"Ergonomic Mesh Chair\",\n            \"description\": \"High-back office desk chair with dynamic lumbar support.\",\n            \"price\": 266,\n            \"stock\": 17,\n            \"images\": [\n                \"https://m.media-amazon.com/images/I/71Pm-xYk7DL._AC_UF894,1000_QL80_.jpg\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c089\",\n                \"name\": \"Home & Kitchen\",\n                \"description\": \"Appliances, Kitchen Tools, and Living Furniture.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08e\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/products?search=keyboard",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "category",
+                      "value": "{{categoryId}}",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "minPrice",
+                      "value": "150",
+                      "disabled": true
+                    },
+                    {
+                      "key": "maxPrice",
+                      "value": "300",
+                      "disabled": true
+                    },
+                    {
+                      "key": "search",
+                      "value": "keyboard",
+                      "type": "text"
+                    },
+                    {
+                      "key": "inStock",
+                      "value": "true",
+                      "disabled": true
+                    },
+                    {
+                      "key": "page",
+                      "value": "1",
+                      "disabled": true
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "687"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"2af-wgBojPX8TU7jRk/tsLF27yOGYME\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:40:07 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Products retrieved successfully\",\n    \"results\": 1,\n    \"pagination\": {\n        \"totalItems\": 1,\n        \"currentPage\": 1,\n        \"totalPages\": 1,\n        \"itemsPerPage\": 10\n    },\n    \"data\": [\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08b\",\n            \"name\": \"Mechanical Keyboard\",\n            \"description\": \"Tactile mechanical gaming keyboard with RGB lighting.\",\n            \"price\": 89.99,\n            \"stock\": 60,\n            \"images\": [\n                \"https://m.media-amazon.com/images/I/71+GqIHjlYL._AC_UF894,1000_QL80_.jpg\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c087\",\n                \"name\": \"Electronics\",\n                \"description\": \"Gadegets, SmartPhones, and Computing Hardware.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08b\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/products?inStock=true",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "category",
+                      "value": "{{categoryId}}",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "minPrice",
+                      "value": "150",
+                      "disabled": true
+                    },
+                    {
+                      "key": "maxPrice",
+                      "value": "300",
+                      "disabled": true
+                    },
+                    {
+                      "key": "search",
+                      "value": "keyboard",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "inStock",
+                      "value": "true"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1",
+                      "disabled": true
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "2898"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"b52-voMq3IOkl2scbt2clXo6c0aMZyw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:40:19 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Products retrieved successfully\",\n    \"results\": 5,\n    \"pagination\": {\n        \"totalItems\": 5,\n        \"currentPage\": 1,\n        \"totalPages\": 1,\n        \"itemsPerPage\": 10\n    },\n    \"data\": [\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08a\",\n            \"name\": \"Wireless ANC Headphones\",\n            \"description\": \"Premium over-air noise cancelling headphones.\",\n            \"price\": 199.99,\n            \"stock\": 50,\n            \"images\": [\n                \"https://morpheus360.com/cdn/shop/products/HP9350B_AltFrontAnglecopy2.jpg?v=1660232787\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c087\",\n                \"name\": \"Electronics\",\n                \"description\": \"Gadegets, SmartPhones, and Computing Hardware.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08a\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08b\",\n            \"name\": \"Mechanical Keyboard\",\n            \"description\": \"Tactile mechanical gaming keyboard with RGB lighting.\",\n            \"price\": 89.99,\n            \"stock\": 60,\n            \"images\": [\n                \"https://m.media-amazon.com/images/I/71+GqIHjlYL._AC_UF894,1000_QL80_.jpg\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c087\",\n                \"name\": \"Electronics\",\n                \"description\": \"Gadegets, SmartPhones, and Computing Hardware.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08b\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08c\",\n            \"name\": \"Premium Oversized Hoodie\",\n            \"description\": \"Heavyweight comfort hoodie made from 100% organic cotton.\",\n            \"price\": 67,\n            \"stock\": 48,\n            \"images\": [\n                \"https://celevere.com/cdn/shop/files/3.webp?v=1768080610&width=3840\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c088\",\n                \"name\": \"Apparel\",\n                \"description\": \"Trendy Clothes, Footwear, and Apparel Accessories.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08c\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08e\",\n            \"name\": \"Ergonomic Mesh Chair\",\n            \"description\": \"High-back office desk chair with dynamic lumbar support.\",\n            \"price\": 266,\n            \"stock\": 17,\n            \"images\": [\n                \"https://m.media-amazon.com/images/I/71Pm-xYk7DL._AC_UF894,1000_QL80_.jpg\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c089\",\n                \"name\": \"Home & Kitchen\",\n                \"description\": \"Appliances, Kitchen Tools, and Living Furniture.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08e\"\n        },\n        {\n            \"_id\": \"6a5206a5bd51e2a1ef59c08f\",\n            \"name\": \"Stainless Steel Coffe Maker\",\n            \"description\": \"15-bar programmable expresso machine with milk frother.\",\n            \"price\": 588,\n            \"stock\": 7,\n            \"images\": [\n                \"https://www.cnet.com/a/img/resize/cb2220b63c1f6f651b10a2522d2afe9aae0d82ce/hub/2025/06/20/29042b5c-e4e0-4e28-b594-60c07dbbb395/img-1480-1.jpg?auto=webp&height=500\"\n            ],\n            \"category\": {\n                \"_id\": \"6a5206a5bd51e2a1ef59c089\",\n                \"name\": \"Home & Kitchen\",\n                \"description\": \"Appliances, Kitchen Tools, and Living Furniture.\"\n            },\n            \"isStock\": true,\n            \"createdAt\": \"2026-07-11T09:02:29.501Z\",\n            \"updatedAt\": \"2026-07-11T09:02:29.501Z\",\n            \"__v\": 0,\n            \"inStock\": true,\n            \"id\": \"6a5206a5bd51e2a1ef59c08f\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/products?category={{categoryId}}&inStock=true",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "category",
+                      "value": "{{categoryId}}",
+                      "type": "text"
+                    },
+                    {
+                      "key": "minPrice",
+                      "value": "150",
+                      "disabled": true
+                    },
+                    {
+                      "key": "maxPrice",
+                      "value": "300",
+                      "disabled": true
+                    },
+                    {
+                      "key": "search",
+                      "value": "keyboard",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "inStock",
+                      "value": "true"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1",
+                      "disabled": true
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "165"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"a5-4qAa/24lfoBsZ2k8D9puWpK/MJo\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:40:41 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Products retrieved successfully\",\n    \"results\": 0,\n    \"pagination\": {\n        \"totalItems\": 0,\n        \"currentPage\": 1,\n        \"totalPages\": 0,\n        \"itemsPerPage\": 10\n    },\n    \"data\": []\n}"
+            }
+          ]
+        },
+        {
+          "name": "Add Product",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Mechanical Ergonomic Keyboard\",\r\n    \"description\": \"Spplit wireless keyboard with hot-swappable switches and RGB backlighting\",\r\n    \"price\": 149.50,\r\n    \"category\": \"{{categoryId}}\",\r\n    \"stock\": 120\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "success - 201 Created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Mechanical Ergonomic Keyboard\",\r\n    \"description\": \"Spplit wireless keyboard with hot-swappable switches and RGB backlighting\",\r\n    \"price\": 149.50,\r\n    \"category\": \"{{categoryId}}\",\r\n    \"stock\": 120\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "456"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1c8-zMhhcQWsnnIMDks/Yf6JotHfJEk\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:42:32 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Product created successfully\",\n    \"data\": {\n        \"name\": \"Mechanical Ergonomic Keyboard\",\n        \"description\": \"Spplit wireless keyboard with hot-swappable switches and RGB backlighting\",\n        \"price\": 149.5,\n        \"stock\": 120,\n        \"images\": [],\n        \"category\": \"6a52482348ef2d119fbec9b7\",\n        \"isStock\": true,\n        \"_id\": \"6a52484848ef2d119fbec9b8\",\n        \"createdAt\": \"2026-07-11T13:42:32.981Z\",\n        \"updatedAt\": \"2026-07-11T13:42:32.981Z\",\n        \"__v\": 0,\n        \"inStock\": true,\n        \"id\": \"6a52484848ef2d119fbec9b8\"\n    }\n}"
+            },
+            {
+              "name": "Error - 404 Not Found",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Mechanical Ergonomic Keyboard\",\r\n    \"description\": \"Spplit wireless keyboard with hot-swappable switches and RGB backlighting\",\r\n    \"price\": 149.50,\r\n    \"category\": \"{{categoryId}}\",\r\n    \"stock\": 120\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "99"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"63-j/pKbm6aawnsjhDdSlDGmvDbpyc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:41:30 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Cannot create product: Referenced category does not exist\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "Error - 400 Bad Request",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Mechanical Ergonomic Keyboard\",\r\n    \"description\": \"Spplit wireless keyboard with hot-swappable switches and RGB backlighting\",\r\n\r\n    \"category\": \"{{categoryId}}\",\r\n    \"stock\": 120\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "90"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"5a-DmyK/B3U6rBUsTKrrzgJqnjAS/g\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:42:45 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Invalid input details: Product price is required\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "Error - 404 Not Found",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Mechanical Ergonomic Keyboard\",\r\n    \"description\": \"Spplit wireless keyboard with hot-swappable switches and RGB backlighting\",\r\n    \"price\": 149.50,\r\n    // \"category\": \"{{categoryId}}\",\r\n    \"stock\": 120\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "99"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"63-j/pKbm6aawnsjhDdSlDGmvDbpyc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:57:12 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Cannot create product: Referenced category does not exist\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "Error - 400 Bad Request",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    // \"name\": \"Mechanical Ergonomic Keyboard\",\r\n    \"description\": \"Spplit wireless keyboard with hot-swappable switches and RGB backlighting\",\r\n    \"price\": 149.50,\r\n    \"category\": \"{{categoryId}}\",\r\n    \"stock\": 120\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "89"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"59-H27N1iAKkDxx3z7FqM4mQvlNrS0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:57:32 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Invalid input details: Product name is required\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "Error - 400 Bad Request",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Mechanical Ergonomic Keyboard\",\r\n    // \"description\": \"Spplit wireless keyboard with hot-swappable switches and RGB backlighting\",\r\n    \"price\": 149.50,\r\n    \"category\": \"{{categoryId}}\",\r\n    \"stock\": 120\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "96"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"60-TlM714O65fgpNior95xdy6RjZRk\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:57:45 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Invalid input details: Product description is required\",\n    \"data\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/products/{{productId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "{{productId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Error - 404 Not Found",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/products/{{productId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products",
+                    "{{productId}}"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "71"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"47-1gt9i2R/H20kSL7TiaoOA+58Br0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:58:47 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"No product found with that ID\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/products/{{productId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products",
+                    "{{productId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "572"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"23c-LZRQOrvyD7WSbTREiQGph06GzEM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:59:13 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Product retrieved successfully\",\n    \"data\": {\n        \"_id\": \"6a524c0b48ef2d119fbec9bc\",\n        \"name\": \"Mechanical Ergonomic Keyboard\",\n        \"description\": \"Spplit wireless keyboard with hot-swappable switches and RGB backlighting\",\n        \"price\": 149.5,\n        \"stock\": 120,\n        \"images\": [],\n        \"category\": {\n            \"_id\": \"6a52482348ef2d119fbec9b7\",\n            \"name\": \"Home Office & Ergonomics\",\n            \"description\": \"Premium desks, chairs, and accessories for productivity\"\n        },\n        \"isStock\": true,\n        \"createdAt\": \"2026-07-11T13:58:35.790Z\",\n        \"updatedAt\": \"2026-07-11T13:58:35.790Z\",\n        \"__v\": 0,\n        \"inStock\": true,\n        \"id\": \"6a524c0b48ef2d119fbec9bc\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Edit Product",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"price\": 160,\r\n    \"stock\": 115\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products/{{productId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "{{productId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"price\": 160,\r\n    \"stock\": 115\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products/{{productId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products",
+                    "{{productId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "568"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"238-6FuzuMtVNhNXk8DxWIR4kvMugjo\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:59:28 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Product updated successfully\",\n    \"data\": {\n        \"_id\": \"6a524c0b48ef2d119fbec9bc\",\n        \"name\": \"Mechanical Ergonomic Keyboard\",\n        \"description\": \"Spplit wireless keyboard with hot-swappable switches and RGB backlighting\",\n        \"price\": 160,\n        \"stock\": 115,\n        \"images\": [],\n        \"category\": {\n            \"_id\": \"6a52482348ef2d119fbec9b7\",\n            \"name\": \"Home Office & Ergonomics\",\n            \"description\": \"Premium desks, chairs, and accessories for productivity\"\n        },\n        \"isStock\": true,\n        \"createdAt\": \"2026-07-11T13:58:35.790Z\",\n        \"updatedAt\": \"2026-07-11T13:59:28.297Z\",\n        \"__v\": 0,\n        \"inStock\": true,\n        \"id\": \"6a524c0b48ef2d119fbec9bc\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"price\": 160,\r\n    \"stock\": 115\r\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products/{{productId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "{{productId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"price\": 160,\r\n    \"stock\": 115\r\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products/{{productId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products",
+                    "{{productId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "73"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"49-y+ePxSt0z3f3WS10Rr8CxSWe7ug\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:35:35 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Product deleted successfully\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "Error - 404 Not Found",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"price\": 160,\r\n    \"stock\": 115\r\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products/{{productId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products",
+                    "{{productId}}"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "71"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"47-1gt9i2R/H20kSL7TiaoOA+58Br0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 13:35:44 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"No product found with that ID\",\n    \"data\": null\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cart",
+      "item": [
+        {
+          "name": "Get",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cart",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cart"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "215"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"d7-oTrdJmYoMZ4KE1BThyweTFbnHAg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:07:19 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Cart retrieved successfully\",\n    \"data\": {\n        \"_id\": \"6a4efe9d328dbb633c9d6ac5\",\n        \"items\": [],\n        \"totalPrice\": 0,\n        \"createdAt\": \"2026-07-09T01:51:25.995Z\",\n        \"updatedAt\": \"2026-07-11T12:25:07.821Z\",\n        \"__v\": 18\n    }\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "489"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1e9-qJ3ppXox1feffw2AcgJUVeXb1s8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:08:10 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Cart retrieved successfully\",\n    \"data\": {\n        \"_id\": \"6a4efe9d328dbb633c9d6ac5\",\n        \"items\": [\n            {\n                \"product\": {\n                    \"_id\": \"6a524c0b48ef2d119fbec9bc\",\n                    \"name\": \"Mechanical Ergonomic Keyboard\",\n                    \"description\": \"Spplit wireless keyboard with hot-swappable switches and RGB backlighting\",\n                    \"price\": 160,\n                    \"images\": [],\n                    \"inStock\": false,\n                    \"id\": \"6a524c0b48ef2d119fbec9bc\"\n                },\n                \"quantity\": 1,\n                \"price\": 160\n            }\n        ],\n        \"totalPrice\": 160,\n        \"createdAt\": \"2026-07-09T01:51:25.995Z\",\n        \"updatedAt\": \"2026-07-11T14:07:40.591Z\",\n        \"__v\": 19\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Add item to cart",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productId\": \"{{productId}}\",\r\n    \"quantity\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/cart/items",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "items"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"productId\": \"{{productId}}\",\r\n    \"quantity\": 1\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart/items",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart",
+                    "items"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "493"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1ed-v7CZh2ZzCvNBkXfquVm6qsRdFGs\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:07:40 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Item added to cart successfully\",\n    \"data\": {\n        \"_id\": \"6a4efe9d328dbb633c9d6ac5\",\n        \"items\": [\n            {\n                \"product\": {\n                    \"_id\": \"6a524c0b48ef2d119fbec9bc\",\n                    \"name\": \"Mechanical Ergonomic Keyboard\",\n                    \"description\": \"Spplit wireless keyboard with hot-swappable switches and RGB backlighting\",\n                    \"price\": 160,\n                    \"images\": [],\n                    \"inStock\": false,\n                    \"id\": \"6a524c0b48ef2d119fbec9bc\"\n                },\n                \"quantity\": 1,\n                \"price\": 160\n            }\n        ],\n        \"totalPrice\": 160,\n        \"createdAt\": \"2026-07-09T01:51:25.995Z\",\n        \"updatedAt\": \"2026-07-11T14:07:40.591Z\",\n        \"__v\": 19\n    }\n}"
+            },
+            {
+              "name": "Error - 404 Not Found",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    // \"productId\": \"{{productId}}\",\r\n    \"quantity\": 1\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart/items",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart",
+                    "items"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "59"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"3b-0iBFHP7Jwl24+H3LhOB1Ve7+Us0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:08:25 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Product not found\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "Error - 400 Bad Request",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"productId\": \"{{productId}}\",\r\n    \"quantity\": 3000\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart/items",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart",
+                    "items"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "87"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"57-2TrfJmPncvgJMPWkpCcXkkKdgh8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 22 Jul 2026 15:01:51 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Insufficient stock. Only 120 items available.\",\n    \"data\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "update cart item",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"quantity\": 3\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/cart/items/{{productId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "items",
+                "{{productId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"quantity\": 3\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart/items/{{productId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart",
+                    "items",
+                    "{{productId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "487"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1e7-uXcJfHA/hayOdigAUfdmowOBpO8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:09:13 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Cart updated successfully\",\n    \"data\": {\n        \"_id\": \"6a4efe9d328dbb633c9d6ac5\",\n        \"items\": [\n            {\n                \"product\": {\n                    \"_id\": \"6a524c0b48ef2d119fbec9bc\",\n                    \"name\": \"Mechanical Ergonomic Keyboard\",\n                    \"description\": \"Spplit wireless keyboard with hot-swappable switches and RGB backlighting\",\n                    \"price\": 160,\n                    \"images\": [],\n                    \"inStock\": false,\n                    \"id\": \"6a524c0b48ef2d119fbec9bc\"\n                },\n                \"quantity\": 3,\n                \"price\": 160\n            }\n        ],\n        \"totalPrice\": 480,\n        \"createdAt\": \"2026-07-09T01:51:25.995Z\",\n        \"updatedAt\": \"2026-07-11T14:09:13.425Z\",\n        \"__v\": 19\n    }\n}"
+            },
+            {
+              "name": "Error - 400 Bad Request",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    // \"quantity\": 3\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart/items/{{productId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart",
+                    "items",
+                    "{{productId}}"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "86"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"56-7+V5olqQnWevN5Pn/PgLoEgY1Qo\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:10:22 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Quantity must be a valid non-negative number\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "Error - 404 Not Found",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"quantity\": 3\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart/items/{{productId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart",
+                    "items",
+                    "{{productId}}"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "69"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"45-A+qrbIf91UT1y8UJOhWq0JmQDh4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:11:26 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Item not found in your cart\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    // \"quantity\": 3\r\n    \"quantity\": 0\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart/items/{{productId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart",
+                    "items",
+                    "{{productId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "213"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"d5-2OFD1f7lkDv2JZwg6IsfmRCvgg4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 22 Jul 2026 15:03:29 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Cart updated successfully\",\n    \"data\": {\n        \"_id\": \"6a4efe9d328dbb633c9d6ac5\",\n        \"items\": [],\n        \"totalPrice\": 0,\n        \"createdAt\": \"2026-07-09T01:51:25.995Z\",\n        \"updatedAt\": \"2026-07-22T15:03:29.142Z\",\n        \"__v\": 26\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Remove Item",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"quantity\": 3\r\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/cart/items/{{productId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "items",
+                "{{productId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Success - 200 OK",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"quantity\": 3\r\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart/items/{{productId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart",
+                    "items",
+                    "{{productId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "223"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"df-NP4ECdb0MPR7ST8ro6nm6bTG4FY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:11:16 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Item removed from cart successfully\",\n    \"data\": {\n        \"_id\": \"6a4efe9d328dbb633c9d6ac5\",\n        \"items\": [],\n        \"totalPrice\": 0,\n        \"createdAt\": \"2026-07-09T01:51:25.995Z\",\n        \"updatedAt\": \"2026-07-11T14:11:16.994Z\",\n        \"__v\": 20\n    }\n}"
+            },
+            {
+              "name": "Error - 404 Not Found",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"quantity\": 3\r\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart/items/{{productId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart",
+                    "items",
+                    "{{productId}}"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "69"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"45-A+qrbIf91UT1y8UJOhWq0JmQDh4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:12:20 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Item not found in your cart\",\n    \"data\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "Clear Cart",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cart",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cart"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "213"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"d5-KHllrMHAAS08JD3ovaZbS7XS59c\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:13:26 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Cart cleared successfully\",\n    \"data\": {\n        \"_id\": \"6a4efe9d328dbb633c9d6ac5\",\n        \"items\": [],\n        \"totalPrice\": 0,\n        \"createdAt\": \"2026-07-09T01:51:25.995Z\",\n        \"updatedAt\": \"2026-07-11T14:11:16.994Z\",\n        \"__v\": 20\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "Get All Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/orders",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "72"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"48-NyknfVv2ptJRyCm/tZP6HzTP1t0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:45:02 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Orders retrieved successfully\",\n    \"data\": []\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "461"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1cd-Nh6hiKtXayrCgEecJr0nylRdNXw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:46:53 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Orders retrieved successfully\",\n    \"data\": [\n        {\n            \"_id\": \"6a5257382ee225a1f8497ef1\",\n            \"orderNumber\": \"ORD-1783781176558-4289\",\n            \"items\": [\n                {\n                    \"product\": \"6a524c0b48ef2d119fbec9bc\",\n                    \"name\": \"Mechanical Ergonomic Keyboard\",\n                    \"price\": 160,\n                    \"quantity\": 1\n                }\n            ],\n            \"totalPrice\": 160,\n            \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\n            \"status\": \"pending\",\n            \"paymentStatus\": \"Pending\",\n            \"createdAt\": \"2026-07-11T14:46:16.561Z\",\n            \"updatedAt\": \"2026-07-11T14:46:16.561Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Add Order",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\r\n    \"paymentMethod\": \"Paypal\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/orders",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Error - 400 Bad Request",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\r\n    \"paymentMethod\": \"Paypal\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "92"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"5c-lTZZw3cYn82EMYngDLrYgOn1eoo\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:45:32 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Your cart is empty. Add items before checking out.\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "success - 201 Created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\r\n    \"paymentMethod\": \"Paypal\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "455"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1c7-xIoqp0nym9UGZ6YNLGuHeyWScSg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:46:16 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Order placed successfully\",\n    \"data\": {\n        \"orderNumber\": \"ORD-1783781176558-4289\",\n        \"items\": [\n            {\n                \"product\": \"6a524c0b48ef2d119fbec9bc\",\n                \"name\": \"Mechanical Ergonomic Keyboard\",\n                \"price\": 160,\n                \"quantity\": 1\n            }\n        ],\n        \"totalPrice\": 160,\n        \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\n        \"status\": \"pending\",\n        \"paymentStatus\": \"Pending\",\n        \"_id\": \"6a5257382ee225a1f8497ef1\",\n        \"createdAt\": \"2026-07-11T14:46:16.561Z\",\n        \"updatedAt\": \"2026-07-11T14:46:16.561Z\",\n        \"__v\": 0\n    }\n}"
+            },
+            {
+              "name": "Error - 400 Bad Request",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    // \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\r\n    \"paymentMethod\": \"Paypal\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "79"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4f-m1rPrGZdEZLoWAgBVzHn010OAGg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 22 Jul 2026 15:46:44 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Shipping address details are required\",\n    \"data\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/orders/{{orderId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "{{orderId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Error - 404 Not Found",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders/{{orderId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders",
+                    "{{orderId}}"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "69"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"45-XHtl+le0VBBX3sbLVUf1uUMSUQo\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:49:38 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"No order found with that ID\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders/{{orderId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders",
+                    "{{orderId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "458"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1ca-SCFL4uy3mC1K87zrpWghCrlgjVs\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:50:03 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Order retrieved successfully\",\n    \"data\": {\n        \"_id\": \"6a5257382ee225a1f8497ef1\",\n        \"orderNumber\": \"ORD-1783781176558-4289\",\n        \"items\": [\n            {\n                \"product\": \"6a524c0b48ef2d119fbec9bc\",\n                \"name\": \"Mechanical Ergonomic Keyboard\",\n                \"price\": 160,\n                \"quantity\": 1\n            }\n        ],\n        \"totalPrice\": 160,\n        \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\n        \"status\": \"pending\",\n        \"paymentStatus\": \"Pending\",\n        \"createdAt\": \"2026-07-11T14:46:16.561Z\",\n        \"updatedAt\": \"2026-07-11T14:46:16.561Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Edit Order",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\": \"cancelled\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/orders/{{orderId}}/status",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "{{orderId}}",
+                "status"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Error - 400 Bad Request",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    // \"status\": \"cancelled\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders/{{orderId}}/status",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders",
+                    "{{orderId}}",
+                    "status"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "75"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4b-YWo6utaGWDZLosPrLk+jox4ed4I\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:56:20 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Status property must be specified\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "Error - 404 Not Found",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"cancelled\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders/{{orderId}}/status",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders",
+                    "{{orderId}}",
+                    "status"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "69"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"45-XHtl+le0VBBX3sbLVUf1uUMSUQo\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 15:00:47 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"No order found with that ID\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"cancelled\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders/{{orderId}}/status",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders",
+                    "{{orderId}}",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "465"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1d1-XClzuXJA15lcfVwLGoEdhStjWcA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 15:04:30 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Order status updated successfully\",\n    \"data\": {\n        \"_id\": \"6a5257382ee225a1f8497ef1\",\n        \"orderNumber\": \"ORD-1783781176558-4289\",\n        \"items\": [\n            {\n                \"product\": \"6a524c0b48ef2d119fbec9bc\",\n                \"name\": \"Mechanical Ergonomic Keyboard\",\n                \"price\": 160,\n                \"quantity\": 1\n            }\n        ],\n        \"totalPrice\": 160,\n        \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\n        \"status\": \"cancelled\",\n        \"paymentStatus\": \"Pending\",\n        \"createdAt\": \"2026-07-11T14:46:16.561Z\",\n        \"updatedAt\": \"2026-07-11T15:04:30.943Z\",\n        \"__v\": 0\n    }\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"pending\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders/{{orderId}}/status",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders",
+                    "{{orderId}}",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "463"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1cf-5YK86KezSXmIjCHu21hlOGncC8I\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 15:04:49 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Order status updated successfully\",\n    \"data\": {\n        \"_id\": \"6a5257382ee225a1f8497ef1\",\n        \"orderNumber\": \"ORD-1783781176558-4289\",\n        \"items\": [\n            {\n                \"product\": \"6a524c0b48ef2d119fbec9bc\",\n                \"name\": \"Mechanical Ergonomic Keyboard\",\n                \"price\": 160,\n                \"quantity\": 1\n            }\n        ],\n        \"totalPrice\": 160,\n        \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\n        \"status\": \"pending\",\n        \"paymentStatus\": \"Pending\",\n        \"createdAt\": \"2026-07-11T14:46:16.561Z\",\n        \"updatedAt\": \"2026-07-11T15:04:49.845Z\",\n        \"__v\": 0\n    }\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"confirmed\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders/{{orderId}}/status",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders",
+                    "{{orderId}}",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "465"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1d1-+COSiv4Fcbdpdu6wkq0XxaVUb8Q\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 15:07:47 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Order status updated successfully\",\n    \"data\": {\n        \"_id\": \"6a5257382ee225a1f8497ef1\",\n        \"orderNumber\": \"ORD-1783781176558-4289\",\n        \"items\": [\n            {\n                \"product\": \"6a524c0b48ef2d119fbec9bc\",\n                \"name\": \"Mechanical Ergonomic Keyboard\",\n                \"price\": 160,\n                \"quantity\": 1\n            }\n        ],\n        \"totalPrice\": 160,\n        \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\n        \"status\": \"confirmed\",\n        \"paymentStatus\": \"Pending\",\n        \"createdAt\": \"2026-07-11T14:46:16.561Z\",\n        \"updatedAt\": \"2026-07-11T15:07:47.598Z\",\n        \"__v\": 0\n    }\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"shipped\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders/{{orderId}}/status",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders",
+                    "{{orderId}}",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "463"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1cf-Am4aUtdYyvX68q+wxV5v72kMqJU\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 15:14:01 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Order status updated successfully\",\n    \"data\": {\n        \"_id\": \"6a5257382ee225a1f8497ef1\",\n        \"orderNumber\": \"ORD-1783781176558-4289\",\n        \"items\": [\n            {\n                \"product\": \"6a524c0b48ef2d119fbec9bc\",\n                \"name\": \"Mechanical Ergonomic Keyboard\",\n                \"price\": 160,\n                \"quantity\": 1\n            }\n        ],\n        \"totalPrice\": 160,\n        \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\n        \"status\": \"shipped\",\n        \"paymentStatus\": \"Pending\",\n        \"createdAt\": \"2026-07-11T14:46:16.561Z\",\n        \"updatedAt\": \"2026-07-11T15:14:01.747Z\",\n        \"__v\": 0\n    }\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"delivered\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders/{{orderId}}/status",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders",
+                    "{{orderId}}",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "465"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1d1-hQFzQK/3CR6Hxc3dra22TTK7AzA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 15:15:09 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Order status updated successfully\",\n    \"data\": {\n        \"_id\": \"6a5257382ee225a1f8497ef1\",\n        \"orderNumber\": \"ORD-1783781176558-4289\",\n        \"items\": [\n            {\n                \"product\": \"6a524c0b48ef2d119fbec9bc\",\n                \"name\": \"Mechanical Ergonomic Keyboard\",\n                \"price\": 160,\n                \"quantity\": 1\n            }\n        ],\n        \"totalPrice\": 160,\n        \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\n        \"status\": \"delivered\",\n        \"paymentStatus\": \"Pending\",\n        \"createdAt\": \"2026-07-11T14:46:16.561Z\",\n        \"updatedAt\": \"2026-07-11T15:15:09.639Z\",\n        \"__v\": 0\n    }\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"cancelled\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders/{{orderId}}/status",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders",
+                    "{{orderId}}",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "465"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1d1-IMP6sK5/W0KjdznxCx8nswQq9R4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 15:15:37 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Order status updated successfully\",\n    \"data\": {\n        \"_id\": \"6a5257382ee225a1f8497ef1\",\n        \"orderNumber\": \"ORD-1783781176558-4289\",\n        \"items\": [\n            {\n                \"product\": \"6a524c0b48ef2d119fbec9bc\",\n                \"name\": \"Mechanical Ergonomic Keyboard\",\n                \"price\": 160,\n                \"quantity\": 1\n            }\n        ],\n        \"totalPrice\": 160,\n        \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\n        \"status\": \"cancelled\",\n        \"paymentStatus\": \"Pending\",\n        \"createdAt\": \"2026-07-11T14:46:16.561Z\",\n        \"updatedAt\": \"2026-07-11T15:15:37.967Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Remove Order",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\r\n    \"paymentMethod\": \"Paypal\"\r\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/orders/{{orderId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "{{orderId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Error - 404 Not Found",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\r\n    \"paymentMethod\": \"Paypal\"\r\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders/{{orderId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders",
+                    "{{orderId}}"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "69"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"45-XHtl+le0VBBX3sbLVUf1uUMSUQo\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 15:19:05 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"fail\",\n    \"message\": \"No order found with that ID\",\n    \"data\": null\n}"
+            },
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\r\n    \"paymentMethod\": \"Paypal\"\r\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders/{{orderId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders",
+                    "{{orderId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "71"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"47-kWNnmApk3Paj+pNIglAbgfuDZR4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 15:21:12 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Order cleared successfully\",\n    \"data\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "Clear Orders",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\r\n    \"paymentMethod\": \"Paypal\"\r\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/orders",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "success - 200 OK",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"shippingAddress\": \"742 Evergreen Terrace, Springfield\",\r\n    \"paymentMethod\": \"Paypal\"\r\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "86"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"56-lOzMgKSILPwM5i6bTEaaiUzLuzc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 11 Jul 2026 14:42:10 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"All orders have been cleared successfully\",\n    \"data\": null\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
