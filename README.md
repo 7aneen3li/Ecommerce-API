@@ -357,6 +357,6 @@ This project was developed for educational purposes as part of the **Digital Egy
 
 If you found this project helpful or interesting, consider giving it a ⭐ on GitHub.
 
-**Happy Coding! 🚀**
+**Happy Coding! 🚀✨**
 
 </div>
